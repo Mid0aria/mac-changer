@@ -13,7 +13,7 @@ def install_packages(packages):
         try:
             __import__(package)
         except ImportError:
-            print(f"{package} bulunamadı. Yükleniyor...")
+            print(f"{package} was not found. Installing...")
             subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 
